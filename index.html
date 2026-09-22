@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Explorer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<header>
+    <div class="header-inner">
+
+        <div class="logo">
+            <div class="logo-icon">🌍</div>
+
+            <div>
+                <h1>World Explorer</h1>
+                <p>Explore • Discover • Learn</p>
+            </div>
+        </div>
+
+        <div class="header-buttons">
+            <button class="icon-btn" id="randomTop" title="Random Country">🎲</button>
+            <button class="icon-btn" id="favoritesTop" title="Favorites">⭐</button>
+        </div>
+
+    </div>
+</header>
+
+<main>
+
+<section class="hero">
+
+    <h2>Explore the World</h2>
+
+    <p>
+        Discover countries, capitals, populations, currencies,
+        languages and fascinating geographical information.
+    </p>
+
+    <div class="search-box">
+        <span>🔎</span>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search a country or capital..."
+        >
+
+        <button class="search-btn" id="searchBtn">
+            Search
+        </button>
+    </div>
+
+</section>
+
+<div class="quick-actions">
+
+    <button class="action" id="randomBtn">
+        🎲 Random Country
+    </button>
+
+    <button class="action" id="allBtn">
+        🌎 All Countries
+    </button>
+
+    <button class="action" id="favoritesBtn">
+        ⭐ Favorites
+    </button>
+
+</div>
+
+<section>
+
+    <div class="section-title">
+        <h3>Explore by Continent</h3>
+        <span id="resultText">25 shown</span>
+    </div>
+
+    <div class="continents">
+
+        <button class="continent" data-continent="Asia">
+            <span class="emoji">🌏</span>
+            Asia
+        </button>
+
+        <button class="continent" data-continent="Europe">
+            <span class="emoji">🌍</span>
+            Europe
+        </button>
+
+        <button class="continent" data-continent="Africa">
+            <span class="emoji">🌍</span>
+            Africa
+        </button>
+
+        <button class="continent" data-continent="North America">
+            <span class="emoji">🌎</span>
+            North America
+        </button>
+
+        <button class="continent" data-continent="South America">
+            <span class="emoji">🌎</span>
+            South America
+        </button>
+
+        <button class="continent" data-continent="Oceania">
+            <span class="emoji">🌊</span>
+            Oceania
+        </button>
+
+        <button class="continent" data-continent="Antarctica">
+            <span class="emoji">🧊</span>
+            Antarctica
+        </button>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="section-title">
+        <h3 id="countriesTitle">Countries</h3>
+        <span id="count">0</span>
+    </div>
+
+    <div class="country-grid" id="countryGrid"></div>
+
+    <div class="empty" id="empty">
+        <h3>No countries found</h3>
+        <p>Try another country or capital.</p>
+    </div>
+
+</section>
+
+</main>
+
+</div>
+
+
+<!-- COUNTRY MODAL -->
+
+<div class="modal" id="modal">
+
+    <div class="modal-box">
+
+        <button class="close" id="closeModal">×</button>
+
+        <div class="modal-header">
+
+            <div class="modal-flag" id="modalFlag"></div>
+
+            <div>
+                <h2 id="modalName"></h2>
+                <p id="modalOfficial"></p>
+            </div>
+
+        </div>
+
+        <div class="detail-grid" id="detailGrid"></div>
+
+    </div>
+
+</div>
+
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
